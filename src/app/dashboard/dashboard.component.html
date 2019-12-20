@@ -1,0 +1,9 @@
+<h3>Here are some friends</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let friend of friends" class="col-1-4"
+     routerLink="/detail/{{friend.userId}}">
+    <div class="module user">
+      <h4>{{friend.firstName + " " + friend.lastName}}</h4>
+    </div>
+  </a>
+</div>

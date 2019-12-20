@@ -1,0 +1,19 @@
+<div *ngIf="friend">
+
+  <h2>{{friend.firstName}}</h2>
+  <div><span>Email: </span>{{friend.userId}}</div>
+  <div><span>Last Name: </span>{{friend.lastName}}</div>
+  <div>
+    <label>Change your firstname:
+      <input [(ngModel)]="friend.firstName" placeholder="firstname"/>
+      <button (click)="setFirstName()">Change</button>
+    </label>
+  </div>
+  <div>
+    <label>Change your lastname:
+      <input [(ngModel)]="friend.lastName" placeholder="lastname"/>
+      <button (click)="setLastName()">Change</button>
+    </label>
+  </div>
+  <button (click)="goBack()">Ga terug</button>
+</div>
