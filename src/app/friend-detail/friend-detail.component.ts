@@ -39,4 +39,8 @@ export class FriendDetailComponent implements OnInit {
     this.friendService.setFirstName(this.friend);
   }
 
+  setUserStatus(): void {
+    this.friendService.setUserStatus(this.friend);
+  }
+
 }

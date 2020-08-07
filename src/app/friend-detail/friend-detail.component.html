@@ -15,5 +15,11 @@
       <button (click)="setLastName()">Change</button>
     </label>
   </div>
+  <div>
+    <label>Change your status:
+      <input [(ngModel)]="friend.userStatus" placeholder="status"/>
+      <button (click)="setUserStatus()">Change</button>
+    </label>
+  </div>
   <button (click)="goBack()">Ga terug</button>
 </div>

@@ -31,6 +31,13 @@ export class FriendService {
     this.http.post<any>(this.url + '?action=SetFriendAppLastName&lastName=' + friend.lastName + '&userId=' +
       friend.userId, body, {headers: header}).subscribe((res) => console.log(res), (err) => console.log(err));
   }
+  setUserStatus(friend: Friend): void {
+    const body = new HttpParams().append('userStatus', friend.userStatus).append('userId', friend.userId);
+    const header = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post<any>(this.url + '?action=SetFriendAppStatus&userStatus=' + friend.userStatus + '&userId=' +
+friend.userId, body, {headers: header}).subscribe((res) => console.log(res), (err) => console.log(err));
+  }
 
     getFriend(userId: string): Observable<Friend> {
     // TODO: send the message _after_ fetching the hero
